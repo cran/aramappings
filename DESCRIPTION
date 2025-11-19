@@ -1,6 +1,6 @@
 Package: aramappings
 Title: Computes Adaptable Radial Axes Mappings
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     c(person("Manuel", "Rubio-Sánchez", , "manuel.rubio@urjc.es", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-8692-2553")),
@@ -26,7 +26,7 @@ Suggests: testthat (>= 3.0.0), parallelly, geometry, ascentTraining,
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-11-13 18:36:16 UTC; manuel
+Packaged: 2025-11-18 23:34:59 UTC; manuel
 Author: Manuel Rubio-Sánchez [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0002-8692-2553>),
   Dirk J. Lehmann [ctb] (ORCID: <https://orcid.org/0000-0002-8089-4408>),
@@ -38,4 +38,4 @@ Author: Manuel Rubio-Sánchez [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0001-5817-989X>)
 Maintainer: Manuel Rubio-Sánchez <manuel.rubio@urjc.es>
 Repository: CRAN
-Date/Publication: 2025-11-18 09:50:02 UTC
+Date/Publication: 2025-11-19 08:10:18 UTC

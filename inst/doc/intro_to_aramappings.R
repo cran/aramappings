@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
 )
 
 ## ----araplot, echo=FALSE, fig.align = 'center', fig.cap="ARA plot of four variables of a breakfast cereal dataset. High-dimensional data values can be estimated via projections onto the labeled axes, as in Biplots.", out.width = '80%'----
-knitr::include_graphics("../man/figures/vignette_cereals_ara_bb.svg")
+knitr::include_graphics("../man/figures/vignette_cereals_ara_bb.jpg")
 
 ## -----------------------------------------------------------------------------
 # Load package
@@ -87,7 +87,7 @@ draw_ara_plot_2d_standardized(
 )
 
 ## ----unc_l2, echo=FALSE, fig.align = 'center', fig.cap="Unconstrained ARA plot with the l2 norm of a subset of the Autompg dataset.", out.width = '90%'----
-knitr::include_graphics("../man/figures/vignette_autompg_unconstrained_l2_bb.svg")
+knitr::include_graphics("../man/figures/vignette_autompg_unconstrained_l2_bb.jpg")
 
 ## ----echo = T, results = 'show'-----------------------------------------------
 variable <- 1 # "mpg"
@@ -116,7 +116,7 @@ draw_ara_plot_2d_standardized(
 )
 
 ## ----exact_l2, echo=FALSE, fig.align = 'center', fig.cap="Exact ARA plot with the l2 norm of a subset of the Autompg dataset. Exact estimates are obtained for variable 'mpg'.", out.width = '90%'----
-knitr::include_graphics("../man/figures/vignette_autompg_exact_l2_bb.svg")
+knitr::include_graphics("../man/figures/vignette_autompg_exact_l2_bb.jpg")
 
 ## ----echo = T, results = 'show'-----------------------------------------------
 # Compute the mapping and print the execution time
@@ -142,7 +142,7 @@ draw_ara_plot_2d_standardized(
 )
 
 ## ----ordered_l2, echo=FALSE, fig.align = 'center', fig.cap="Ordered ARA plot with the l2 norm of a subset of the Autompg dataset. The values of 'mpg' are ordered correctly along its corresponding axis.", out.width = '90%'----
-knitr::include_graphics("../man/figures/vignette_autompg_ordered_l2_bb.svg")
+knitr::include_graphics("../man/figures/vignette_autompg_ordered_l2_bb.jpg")
 
 ## -----------------------------------------------------------------------------
 # Detect the number of available CPU cores
@@ -182,7 +182,7 @@ draw_ara_plot_2d_standardized(
 )
 
 ## ----unc_l1, echo=FALSE, fig.align = 'center', fig.cap="Unconstrained ARA plot with the l1 norm of a subset of the Autompg dataset.", out.width = '90%'----
-knitr::include_graphics("../man/figures/vignette_autompg_unconstrained_l1_bb.svg")
+knitr::include_graphics("../man/figures/vignette_autompg_unconstrained_l1_bb.jpg")
 
 ## ----echo = T, results = 'show'-----------------------------------------------
 # Compute the mapping and print the execution time
@@ -209,7 +209,7 @@ draw_ara_plot_2d_standardized(
 )
 
 ## ----exact_l1, echo=FALSE, fig.align = 'center', fig.cap="Exact ARA plot with the l1 norm of a subset of the Autompg dataset. Exact estimates are obtained for variable 'mpg'.", out.width = '90%'----
-knitr::include_graphics("../man/figures/vignette_autompg_exact_l1_bb.svg")
+knitr::include_graphics("../man/figures/vignette_autompg_exact_l1_bb.jpg")
 
 ## -----------------------------------------------------------------------------
 # Stop cluster
