@@ -1,7 +1,7 @@
-99e87e9835da287cdfefee10b5a71326 *DESCRIPTION
+f10cf6d594e9ce752e2c94ed43072aee *DESCRIPTION
 bcee2b31fb34f0615a3e53e7ac6fe448 *LICENSE
 289d288b7fddafd26cc849582add181d *NAMESPACE
-6df37a49836180333c667f62ab58fd15 *NEWS.md
+3a280f76d397609412443a0abfda9b2d *NEWS.md
 3c87258f82a26562bf553d2d8f7b9381 *R/ara_exact_l1.R
 9a797502f341a8b59639a899c9f83ed0 *R/ara_exact_l2.R
 214c6818dcee002f5e0e8d907cbc5182 *R/ara_exact_linf.R
@@ -13,11 +13,11 @@ b1be5a64eb49f8ba06b2864b4e3b991f *R/ara_ordered_l2.R
 81714615e7ccd2b21e3b4a1d8d888d38 *R/ara_unconstrained_linf.R
 0f798d9ee9161533319481d564fe45fb *R/draw_ara_plot.R
 37fab233289f84e008db1154244a225e *R/utils.R
-0a63bd4d57347120a0897880bb9baa56 *README.md
+bac4eae18967da2284816fa3a91c77aa *README.md
 d145d9abce7721bb4a66e7604c0b01e6 *build/vignette.rds
-288b04a1968ec805e98f61b4616c9234 *inst/doc/intro_to_aramappings.R
-22d9e0eee5e7ae629bb1d9d78fd3aa5d *inst/doc/intro_to_aramappings.Rmd
-8778156e468a50eb0f1090be7b27588f *inst/doc/intro_to_aramappings.html
+792df5d7b0bcec95586a5208f3fb6539 *inst/doc/intro_to_aramappings.R
+c0c2c6ffa8dba79271ddec0bc64ba71c *inst/doc/intro_to_aramappings.Rmd
+4ed38116bf9bd92ffdfe1731a8f2d3f4 *inst/doc/intro_to_aramappings.html
 9e09c69e34f985e7f49d12334d36f378 *man/ara_exact_l1.Rd
 c7851c5234c06206f092f1f0cc562233 *man/ara_exact_l2.Rd
 4fca71a04bfcce1aca924b38a1677cf2 *man/ara_exact_linf.Rd
@@ -48,5 +48,5 @@ cd1a2cfb51497f4ec21ba883f5daef6d *tests/testthat/test-ara_ordered_l2.R
 02c212751e0c2e590220af47dc1bac09 *tests/testthat/test-ara_unconstrained_l2.R
 f9ad7d7b95d7f2cc7b2b8262761f70b0 *tests/testthat/test-ara_unconstrained_linf.R
 4d1bc78cd8ebac49bbdfa88927a927d6 *tests/testthat/test-draw_ara_plot.R
-22d9e0eee5e7ae629bb1d9d78fd3aa5d *vignettes/intro_to_aramappings.Rmd
+c0c2c6ffa8dba79271ddec0bc64ba71c *vignettes/intro_to_aramappings.Rmd
 9023e9b1eccf2f1581ce18620f9a773f *vignettes/jss2025.bib

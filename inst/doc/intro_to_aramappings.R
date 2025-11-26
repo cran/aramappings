@@ -7,6 +7,17 @@ knitr::opts_chunk$set(
 ## ----araplot, echo=FALSE, fig.align = 'center', fig.cap="ARA plot of four variables of a breakfast cereal dataset. High-dimensional data values can be estimated via projections onto the labeled axes, as in Biplots.", out.width = '80%'----
 knitr::include_graphics("../man/figures/vignette_cereals_ara_bb.jpg")
 
+## ----eval=FALSE---------------------------------------------------------------
+# install.packages("aramappings")
+
+## ----eval=FALSE---------------------------------------------------------------
+# # install.packages("devtools")
+# devtools::install_github("manuelrubio/aramappings", build_vignettes = TRUE)
+
+## ----eval=FALSE---------------------------------------------------------------
+# # install.packages("pak")
+# pak::pak("manuelrubio/aramappings")
+
 ## -----------------------------------------------------------------------------
 # Load package
 library(aramappings)
