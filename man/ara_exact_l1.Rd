@@ -69,16 +69,13 @@ vector norm. Its equality constraint forces estimates to be exact for one of
 the data variables.
 }
 \examples{
-# Load data
-data("auto_mpg", package = "ascentTraining")
-
-# Define subset of (numerical) variables
+# Define subset of (numerical) variables of the auto_mpg dataset
 # 1:"mpg", 4:"horsepower", 5:"weight", 6:"acceleration"
 selected_variables <- c(1, 4, 5, 6)
+n <- length(selected_variables)
 
 # Retain only selected variables and rename dataset as X
 X <- auto_mpg[, selected_variables] # Select a subset of variables
-rm(auto_mpg)
 
 # Remove rows with missing values from X
 N <- nrow(X)
@@ -99,15 +96,20 @@ Z <- scale(X)
 # Define axis vectors (2-dimensional in this example)
 r <- c(0.8, 1, 1.2, 1)
 theta <- c(225, 100, 315, 80) * 2 * pi / 360
-V <- geometry::pol2cart(theta, r)
+V <- pracma::zeros(n, 2)
+for (i in 1:n) {
+  V[i,1] <- r[i] * cos(theta[i])
+  V[i,2] <- r[i] * sin(theta[i])
+}
 
 # Select variable for exact estimates, and use it for coloring the embedded
 # points
-n <- nrow(V)
 variable <- sample(1:n, 1)
 
-# Detect the number of available CPU cores
-NCORES <- parallelly::availableCores(omit = 1)
+# Set the number of CPU cores/workers
+# NCORES <- parallelly::availableCores(omit = 1)
+# NCORES <- max(1,parallel::detectCores() - 1)
+NCORES <- 2L
 
 # Create a cluster for parallel processing
 cl <- parallel::makeCluster(NCORES)

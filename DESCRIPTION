@@ -1,6 +1,6 @@
 Package: aramappings
 Title: Computes Adaptable Radial Axes Mappings
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: 
     c(person("Manuel", "Rubio-Sánchez", , "manuel.rubio@urjc.es", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-8692-2553")),
@@ -21,12 +21,13 @@ Imports: clarabel, CVXR, glpkAPI, Matrix, parallel, pracma, Rglpk,
 URL: https://github.com/manuelrubio/aramappings,
         https://manuelrubio.github.io/aramappings/
 BugReports: https://github.com/manuelrubio/aramappings/issues
-Suggests: testthat (>= 3.0.0), parallelly, geometry, ascentTraining,
-        liver, datasetsICR, knitr, rmarkdown
+Suggests: testthat (>= 3.0.0), parallelly, knitr, rmarkdown
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+Depends: R (>= 3.5)
+LazyData: true
 NeedsCompilation: no
-Packaged: 2025-11-26 02:59:15 UTC; manuel
+Packaged: 2026-01-29 15:58:02 UTC; manuel
 Author: Manuel Rubio-Sánchez [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0002-8692-2553>),
   Dirk J. Lehmann [ctb] (ORCID: <https://orcid.org/0000-0002-8089-4408>),
@@ -38,4 +39,4 @@ Author: Manuel Rubio-Sánchez [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0001-5817-989X>)
 Maintainer: Manuel Rubio-Sánchez <manuel.rubio@urjc.es>
 Repository: CRAN
-Date/Publication: 2025-11-26 03:40:07 UTC
+Date/Publication: 2026-01-29 16:20:02 UTC

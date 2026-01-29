@@ -23,17 +23,12 @@ knitr::include_graphics("../man/figures/vignette_cereals_ara_bb.jpg")
 library(aramappings)
 
 ## -----------------------------------------------------------------------------
-# Load data
-library(ascentTraining) # contains the Auto MPG dataset
-data("auto_mpg")
-
-## -----------------------------------------------------------------------------
 # Define subset of (numerical) variables
 selected_variables <- c(1, 4, 5, 6) # 1:"mpg", 4:"horsepower", 5:"weight", 6:"acceleration")
+n <- length(selected_variables)
 
 # Retain only selected variables and rename dataset as X
 X <- auto_mpg[, selected_variables] # Select a subset of variables
-rm(auto_mpg)
 
 ## -----------------------------------------------------------------------------
 # Remove rows with missing values from X
@@ -56,10 +51,13 @@ Z <- scale(X)
 
 ## -----------------------------------------------------------------------------
 # Define axis vectors (2-dimensional in this example)
-library(geometry)
 r <- c(0.8, 1, 1.2, 1)
 theta <- c(225, 100, 315, 80) * 2 * pi / 360
-V <- pol2cart(theta, r)
+V <- pracma::zeros(n, 2)
+for (i in 1:n) {
+  V[i,1] <- r[i] * cos(theta[i])
+  V[i,2] <- r[i] * sin(theta[i])
+}
 
 ## -----------------------------------------------------------------------------
 # Define weights
@@ -156,12 +154,9 @@ draw_ara_plot_2d_standardized(
 knitr::include_graphics("../man/figures/vignette_autompg_ordered_l2_bb.jpg")
 
 ## -----------------------------------------------------------------------------
-# Detect the number of available CPU cores
-library(parallelly)
-NCORES <- parallelly::availableCores()
-if (NCORES > 1) {
-  NCORES <- floor(NCORES / 2)
-}
+# NCORES <- parallelly::availableCores(omit = 1)
+# NCORES <- max(1,parallel::detectCores() - 1)
+NCORES <- 2L
 
 ## -----------------------------------------------------------------------------
 # Create a cluster for parallel processing

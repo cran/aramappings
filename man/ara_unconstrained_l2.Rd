@@ -61,16 +61,13 @@ associated with each data variable can be supplied to solve the problem in
 Eq. (15).
 }
 \examples{
-# Load data
-data("auto_mpg", package = "ascentTraining")
-
 # Define subset of (numerical) variables
 # 1:"mpg", 4:"horsepower", 5:"weight", 6:"acceleration"
 selected_variables <- c(1, 4, 5, 6)
+n <- length(selected_variables)
 
 # Retain only selected variables and rename dataset as X
 X <- auto_mpg[, selected_variables] # Select a subset of variables
-rm(auto_mpg)
 
 # Remove rows with missing values from X
 N <- nrow(X)
@@ -91,7 +88,11 @@ Z <- scale(X)
 # Define axis vectors (2-dimensional in this example)
 r <- c(0.8, 1, 1.2, 1)
 theta <- c(225, 100, 315, 80) * 2 * pi / 360
-V <- geometry::pol2cart(theta, r)
+V <- pracma::zeros(n, 2)
+for (i in 1:n) {
+  V[i,1] <- r[i] * cos(theta[i])
+  V[i,2] <- r[i] * sin(theta[i])
+}
 
 # Define weights
 weights <- c(1, 0.75, 0.75, 1)
@@ -120,6 +121,7 @@ draw_ara_plot_2d_standardized(
   axis_lines = axis_lines,
   color_variable = color_variable
 )
+
 
 }
 \references{

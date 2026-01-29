@@ -4,21 +4,12 @@ set.seed(1000000)
 
 #################################   Set data   #################################
 
-# Load data set
-data("wine", package = "datasetsICR")
-
-
-# wine <- read.csv(url("https://archive.ics.uci.edu/ml/
-# machine-learning-databases/wine/wine.data"), header = FALSE)
-
 X <- wine[, 2:ncol(wine)] # Select a subset of variables
 
 X <- scale(X) # standardize
 
 N <- nrow(X)
 n <- ncol(X)
-
-
 
 ###############################  Test arguments  ###############################
 
@@ -205,7 +196,10 @@ for (m in 1:3) {
 }
 
 
-NCORES <- parallelly::availableCores(omit = 1)
+# Set the number of CPU cores/workers
+# NCORES <- parallelly::availableCores(omit = 1)
+# NCORES <- max(1,parallel::detectCores() - 1)
+NCORES <- 2L
 
 if (exists("cl")) {
   parallel::stopCluster(cl)
