@@ -1,7 +1,19 @@
+# aramappings 0.2.0
+
+Updated the package due to important changes in impoted packages
+
+- Removed functions and code related to solver glpkAPI, since it has been 
+archived.
+- Use new function CVXR::psolve, with solver Clarabel instead of ECOS
+- The clarabel package has been updated as well, but this did not require any
+updates
+
+
 # aramappings 0.1.3
 
 Removed package dependencies involving data sets. The data sets used in tests
 and examples are now included in the package.
+
 
 # aramappings 0.1.2
 

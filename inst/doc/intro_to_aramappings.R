@@ -169,8 +169,7 @@ mapping <- ara_unconstrained_l1(
   Z,
   V,
   weights = weights,
-  solver = "glpkAPI",
-  use_glpkAPI_simplex = TRUE,
+  solver = "clarabel",
   cluster = cl
 )
 end <- Sys.time()
@@ -197,8 +196,7 @@ mapping <- ara_exact_l1(
   Z,
   V,
   variable = variable,
-  solver = "glpkAPI",
-  use_glpkAPI_simplex = TRUE,
+  solver = "clarabel",
   cluster = cl
 )
 end <- Sys.time()
